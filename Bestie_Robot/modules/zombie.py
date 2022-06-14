@@ -1,6 +1,4 @@
-import asyncio
 from asyncio import sleep
-
 from telethon import events
 from telethon.errors import ChatAdminRequiredError, UserAdminInvalidError
 from telethon.tl.functions.channels import EditBannedRequest
@@ -48,9 +46,10 @@ async def is_administrator(user_id: int, message):
     return admin
 
 
-@telethn.on(events.NewMessage(pattern=f"^[!/]zombies ?(.*)"))
+
+@telethn.on(events.NewMessage(pattern="^[!/]zombies ?(.*)"))
 async def zombies(event):
-    """For .zombies command, list all the zombies in a chat."""
+    """ For .zombies command, list all the zombies in a chat. """
 
     con = event.pattern_match.group(1).lower()
     del_u = 0
@@ -110,3 +109,5 @@ async def zombies(event):
         \n`{del_a}` Zombie Admin Accounts Are Not Removed!"
 
     await cleaning_zombies.edit(del_status)
+
+__mod_name__ = "Zombies"
