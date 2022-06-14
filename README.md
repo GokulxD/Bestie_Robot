@@ -1,7 +1,7 @@
 ![Bestie](https://telegra.ph/file/611535e95b2db27897c6d.jpg)
-# 𝐕𝐣𝐢𝐢 𝑹𝒐𝒃𝒐𝒕
+# Bestie Robot
 
-<b>A Modular 𝐕𝐣𝐢𝐢 Telegram Python Group Management Bot Running On Python3 With An Elephant Sqlalchemy, Redis, Mongodb database.</b>
+<b>A Modular Bestie Telegram Python Group Management Bot Running On Python3 With An Elephant Sqlalchemy, Redis, Mongodb database.</b>
 
 ### ╒═══「 Creator Info/Credits 」
 
