@@ -1,6 +1,7 @@
 {
       "name": "Bestie_Robot",
       "description": "An Anime themed Telegram group management bot.",
+      "logo": "https://telegra.ph/file/b705941cc0414fc54117d.jpg",
       "keywords": [
          "telegram",
          "anime",
