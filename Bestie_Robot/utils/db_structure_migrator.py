@@ -11,7 +11,7 @@ from Bestie_Robot.versions import DB_STRUCTURE_VER
 async def notify_bot_owner(old_ver, new_ver):
     await bot.send_message(
         OWNER_ID,
-        f"Gorgeous database structure was updated from <code>{old_ver}</code> to <code>{new_ver}</code>",
+        f"Bestie database structure was updated from <code>{old_ver}</code> to <code>{new_ver}</code>",
     )
 
 
@@ -41,8 +41,8 @@ else:
             new_ver = curr_ver + 1
             log.info(f"Trying update to {str(new_ver)}...")
 
-            log.debug("Importing: Gorgeous.db." + str(new_ver))
-            import_module("Gorgeous.db." + str(new_ver))
+            log.debug("Importing: Bestie.db." + str(new_ver))
+            import_module("Bestie.db." + str(new_ver))
 
             curr_ver += 1
             mongodb.db_structure.update_one(
