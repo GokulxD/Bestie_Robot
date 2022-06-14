@@ -23,4 +23,4 @@ engine = AIOEngine(motor, MONGO_DB)
 try:
     asyncio.get_event_loop().run_until_complete(motor.server_info())
 except ServerSelectionTimeoutError:
-    sys.exit(log.critical("[GORGEOUS ERROR] Can't Connect To Mongodb! Exiting..."))
+    sys.exit(log.critical("[BESTIE ERROR] Can't Connect To Mongodb! Exiting..."))
