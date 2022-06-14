@@ -5,9 +5,9 @@ from Bestie_Robot import dispatcher
 from Bestie_Robot.modules.disable import DisableAbleCommandHandler
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext
-from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
+from telegram import ParseMode, Update, InlineKeyboardButton, InlineKeyboardMarkup
 
-from telegram.constants import ParseMode
+#from telegram.constants import ParseMode
 
 async def wiki(update: Update, context: CallbackContext):
     kueri = re.split(pattern="wiki", string = update.effective_message.text)
