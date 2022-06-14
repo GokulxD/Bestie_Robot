@@ -5,8 +5,8 @@
 
 ### ╒═══「 Creator Info/Credits 」
 
-+ ➢ [MaddieTheRock](https://github.com/MaddieTheRock) <b>: OWNER | DEV | Noob</b>
-+ ➢ [Aasf](https://github.com/AASFCYBERKING) <b>: REPO | CO-OWNER | Sensei | BFF</b>
++ ➢ [MaddieTheRock](https://github.com/MaddieTheRock) <b>: 2ndOWNER | DEV | Noob</b>
++ ➢ [Aasf](https://github.com/AASFCYBERKING) <b>: REPO | 1stOWNER | Sensei | BFF</b>
 
 ╘══「 <b>Any Other Authorship/Credits Can Be Seen Through The Commits.<b> 」
 
