@@ -1,15 +1,14 @@
 import wikipedia
 import re
 
-from Bestie_Robot.modules.helper_funcs.decorators import bestie_cmd
+from Bestie_Robot import dispatcher
+from Bestie_Robot.modules.disable import DisableAbleCommandHandler
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 
 from telegram.constants import ParseMode
 
-
-@bestie_cmd(command='wiki', can_disable=True)
 async def wiki(update: Update, context: CallbackContext):
     kueri = re.split(pattern="wiki", string = update.effective_message.text)
     message = update.effective_message
@@ -43,3 +42,6 @@ async def wiki(update: Update, context: CallbackContext):
                 f"⚠ Error\n There are too many query! Express it more!\nPossible query result:\n{eet}"
             )
             """
+
+WIKI_HANDLER = DisableAbleCommandHandler("wiki", wiki, run_async=True)
+dispatcher.add_handler(WIKI_HANDLER)
