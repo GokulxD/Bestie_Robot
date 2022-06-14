@@ -24,8 +24,7 @@ regex_downvote = r"^((?i)\-\-\-\-\-|not nice \-\-\-\-\-|)$"
     & filters.reply
     & filters.regex(regex_upvote)
     & ~filters.via_bot
-    & ~filters.bot
-    & ~filters.edited,
+    & ~filters.bot,
     group=karma_positive_group,
 )
 async def upvote(_, message):
@@ -56,8 +55,7 @@ async def upvote(_, message):
     & filters.reply
     & filters.regex(regex_downvote)
     & ~filters.via_bot
-    & ~filters.bot
-    & ~filters.edited,
+    & ~filters.bot,
     group=karma_negative_group,
 )
 async def downvote(_, message):
