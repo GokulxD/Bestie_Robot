@@ -1,4 +1,4 @@
-![Bestie](https://telegra.ph/file/611535e95b2db27897c6d.jpg)
+![Bestie](https://siasky.net/jADjITG97ri_AW1KpKwUgVLuI6SqfP6NY5KTd1rso1Rsvg)
 # Bestie Robot
 
 <b>A Modular Bestie Telegram Python Group Management Bot Running On Python3 With An Elephant Sqlalchemy, Redis, Mongodb database.</b>
