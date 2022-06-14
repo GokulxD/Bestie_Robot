@@ -41,7 +41,6 @@ async def wiki(update: Update, context: CallbackContext):
             await message.reply_text(
                 f"⚠ Error\n There are too many query! Express it more!\nPossible query result:\n{eet}"
             )
-            """
 
 WIKI_HANDLER = DisableAbleCommandHandler("wiki", wiki, run_async=True)
 dispatcher.add_handler(WIKI_HANDLER)
