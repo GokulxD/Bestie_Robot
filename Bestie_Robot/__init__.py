@@ -26,7 +26,7 @@ LOGGER = logging.getLogger(__name__)
 # if version < 3.6, stop bot.
 if sys.version_info[0] < 3 or sys.version_info[1] < 6:
     LOGGER.error(
-        "[GORGEOUS ERROR] You MUST have a python version of at least 3.6! Multiple features depend on this. Bot quitting."
+        "[BESTIE ERROR] You MUST have a python version of at least 3.6! Multiple features depend on this. Bot quitting."
     )
     quit(1)
 
@@ -39,7 +39,7 @@ if ENV:
         OWNER_ID = int(os.environ.get("OWNER_ID", None))
     except ValueError:
         raise Exception(
-            "[GORGEOUS ERROR] Your OWNER_ID env variable is not a valid integer."
+            "[BESTIE ERROR] Your OWNER_ID env variable is not a valid integer."
         )
 
     JOIN_LOGGER = os.environ.get("JOIN_LOGGER", None)
@@ -50,28 +50,28 @@ if ENV:
         DEV_USERS = set(int(x) for x in os.environ.get("DEV_USERS", "").split())
     except ValueError:
         raise Exception(
-            "[GORGEOUS ERROR] Your sudo or dev users list does not contain valid integers."
+            "[BESTIE ERROR] Your sudo or dev users list does not contain valid integers."
         )
 
     try:
         DEMONS = set(int(x) for x in os.environ.get("DEMONS", "").split())
     except ValueError:
         raise Exception(
-            "[GORGEOUS ERROR] Your support users list does not contain valid integers."
+            "[BESTIE ERROR] Your support users list does not contain valid integers."
         )
 
     try:
         WOLVES = set(int(x) for x in os.environ.get("WOLVES", "").split())
     except ValueError:
         raise Exception(
-            "[GORGEOUS ERROR] Your whitelisted users list does not contain valid integers."
+            "[BESTIE ERROR] Your whitelisted users list does not contain valid integers."
         )
 
     try:
         TIGERS = set(int(x) for x in os.environ.get("TIGERS", "").split())
     except ValueError:
         raise Exception(
-            "[GORGEOUS ERROR] Your tiger users list does not contain valid integers."
+            "[BESTIE ERROR] Your tiger users list does not contain valid integers."
         )
 
     INFOPIC = bool(os.environ.get("INFOPIC", False))
@@ -115,7 +115,7 @@ if ENV:
         BL_CHATS = set(int(x) for x in os.environ.get("BL_CHATS", "").split())
     except ValueError:
         raise Exception(
-            "[GORGEOUS ERROR] Your blacklisted chats list does not contain valid integers."
+            "[BESTIE ERROR] Your blacklisted chats list does not contain valid integers."
         )
 
 else:
@@ -127,7 +127,7 @@ else:
         OWNER_ID = int(Config.OWNER_ID)
     except ValueError:
         raise Exception(
-            "[GORGEOUS ERROR] Your OWNER_ID variable is not a valid integer."
+            "[BESTIE ERROR] Your OWNER_ID variable is not a valid integer."
         )
 
     JOIN_LOGGER = Config.JOIN_LOGGER
@@ -138,28 +138,28 @@ else:
         DEV_USERS = set(int(x) for x in Config.DEV_USERS or [])
     except ValueError:
         raise Exception(
-            "[GORGEOUS ERROR] Your sudo or dev users list does not contain valid integers."
+            "[BESTIE ERROR] Your sudo or dev users list does not contain valid integers."
         )
 
     try:
         DEMONS = set(int(x) for x in Config.DEMONS or [])
     except ValueError:
         raise Exception(
-            "[GORGEOUS ERROR] Your support users list does not contain valid integers."
+            "[BESTIE ERROR] Your support users list does not contain valid integers."
         )
 
     try:
         WOLVES = set(int(x) for x in Config.WOLVES or [])
     except ValueError:
         raise Exception(
-            "[GORGEOUS ERROR] Your whitelisted users list does not contain valid integers."
+            "[BESTIE ERROR] Your whitelisted users list does not contain valid integers."
         )
 
     try:
         TIGERS = set(int(x) for x in Config.TIGERS or [])
     except ValueError:
         raise Exception(
-            "[GORGEOUS ERROR] Your tiger users list does not contain valid integers."
+            "[BESTIE ERROR] Your tiger users list does not contain valid integers."
         )
 
     EVENT_LOGS = Config.EVENT_LOGS
@@ -200,7 +200,7 @@ else:
         BL_CHATS = set(int(x) for x in Config.BL_CHATS or [])
     except ValueError:
         raise Exception(
-            "[GORGEOUS ERROR] Your blacklisted chats list does not contain valid integers."
+            "[BESTIE ERROR] Your blacklisted chats list does not contain valid integers."
         )
 
 DRAGONS.add(OWNER_ID)
@@ -212,7 +212,7 @@ try:
 
     REDIS.ping()
 
-    LOGGER.info("[GORGEOUS] Your redis server is now alive!")
+    LOGGER.info("[BESTIE] Your redis server is now alive!")
 
 except BaseException:
 
@@ -222,18 +222,18 @@ finally:
 
     REDIS.ping()
 
-    LOGGER.info("[GORGEOUS] Your redis server is now alive!")
+    LOGGER.info("[BESTIE] Your redis server is now alive!")
 
 if not SPAMWATCH_API:
     sw = None
-    LOGGER.warning("[GORGEOUS] SpamWatch API key missing! recheck your config.")
+    LOGGER.warning("[BESTIE] SpamWatch API key missing! recheck your config.")
 else:
     sw = spamwatch.Client(SPAMWATCH_API)
 
 aiohttpsession = ClientSession()
 updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
-telethn = TelegramClient("GorgeousRobot", API_ID, API_HASH)
-pbot = Client("GorgeousPyro", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
+telethn = TelegramClient("BestieRobot", API_ID, API_HASH)
+pbot = Client("BestiePyro", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
 mongo_client = MongoClient(MONGO_DB_URI)
 db = mongo_client.Bestie_Robot
 arq = ARQ(ARQ_API_URL, ARQ_API_KEY, aiohttpsession)
