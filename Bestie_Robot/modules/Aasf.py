@@ -13,7 +13,7 @@ async def whois(_, m: Message):
         return
     try:
         data = await pbot.get_users(user)
-        boom = await pbot.get_chat(user).
+        boom = await pbot.get_chat(user)
     except Exception as e:
         await m.reply_photo("https://c4.wallpaperflare.com/wallpaper/976/117/318/anime-girls-404-not-found-glowing-eyes-girls-frontline-wallpaper-preview.jpg", caption=f"`404 Error Occurred Failed To Get Data Of The User`\n\n `{e}`")
         return
