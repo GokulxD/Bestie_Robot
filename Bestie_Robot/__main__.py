@@ -121,11 +121,12 @@ buttons = [
                      ],
                     [                  
                        InlineKeyboardButton(
-                             text="🚑 Support",
-                             url=f"https://t.me/{SUPPORT_CHAT}"),
+                         
+                     ],     text="🚑 Support",
+                             url=f"https://t.me/bestie_support"),
                        InlineKeyboardButton(
                              text="📢 Updates",
-                             url="https://t.me/MaddieTheRock")
+                             url="https://t.me/Bestie_Updates")
                      ], 
     ]
 
