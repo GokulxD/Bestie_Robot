@@ -86,8 +86,8 @@ def get_readable_time(seconds: int) -> str:
 
 BOT_NAME = "Bestie_Robot"
 BOT_USERNAME = "Bestie_Robot"
-HELP_IMG = "https://telegra.ph/file/42d08a20f86c5fed1b52e.jpg"
-GROUP_START_IMG = "https://telegra.ph/file/3ed37a900bfc00ded1d55.mp4"
+HELP_IMAGE = "https://telegra.ph/file/029072e37630ecabd53ad.jpg"
+GROUP_START_IMG = "https://telegra.ph/file/491514bc7de907899a4b0.jpg"
 
 HELP_MSG = "Click the button below to get help manu in your pm."
 START_MSG = "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>"
