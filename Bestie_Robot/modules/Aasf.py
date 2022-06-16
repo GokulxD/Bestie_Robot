@@ -10,7 +10,7 @@ async def whois(_, m: Message):
         user = m.from_user.id
     elif not m.reply_to_message and len(m.command) != 1:
         user = m.text.split(None, 1)[1]
-            return
+        return
     try:
         data = await pbot.get_users(user)
     except Exception as e:
