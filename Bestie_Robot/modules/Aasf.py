@@ -19,5 +19,5 @@ async def whois(_, m: Message):
         return
     await pbot.send_message(
         m.chat.id,
-        f"**╒═══「 Appraisal Results: 」**\n**❂ First Name:** `{data.first_name}`\n**❂ Last Name:** `{data.last_name}`\n**❂ Username: @{data.username}**\n**❂ Userlink: {data.mention}**\n**❂ User ID:** `{data.id}`\n**❂ About:** `{boom.bio}`",
+        f"**╒═══「 Appraisal Results: 」**\n**➛ First Name:** `{data.first_name}`\n**➛ Last Name:** `{data.last_name}`\n**➛ Username: @{data.username}**\n**➛ Userlink: {data.mention}**\n**➛ User ID:** `{data.id}`\n**➛ About:** `{boom.bio}`",
     )
