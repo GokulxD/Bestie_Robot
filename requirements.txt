@@ -14,7 +14,7 @@ zalgo-text
 geopy
 tswift
 nltk
-pyrogram
+pyrogram==2.0.26
 psutil
 Pillow>=4.2.0
 CurrencyConverter
