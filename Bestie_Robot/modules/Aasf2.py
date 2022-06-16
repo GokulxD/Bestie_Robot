@@ -24,8 +24,8 @@ async def shell(_, m: Message):
     if len(msg) > 4096:
         with io.BytesIO(msg) as file:
             file.name = "shell.txt"
-                await bot.send_file(
-                em.chat.id,
+                await pbot.send_file(
+                m.chat.id,
                 file,
                 force_document=True,
                 caption="`Output Was Too Long, Sent As File`",
