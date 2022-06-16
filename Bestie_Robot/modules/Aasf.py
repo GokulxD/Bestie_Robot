@@ -4,15 +4,15 @@ from pyrogram.types import Message
 
 @pbot.on_message(filters.command("whois", prefixes=["/", ".", "?", "-"]))
 async def whois(_, m: Message):
-    try:
-        to_get = len(m.command) != 1
-    except Exception:
-        if m.reply_to_message:
-            to_get = m.reply_to_message.from_user.id
-        else:
+    if m.reply_to_message:
+        user = m.reply_to_message.from_user.id
+    elif not m.reply_to_message and len(m.command) == 1:
+        user = m.from_user.id
+    elif not m.reply_to_message and len(m.command) != 1:
+        user = m.text.split(None, 1)[1]
             return
     try:
-        data = await pbot.get_users(to_get)
+        data = await pbot.get_users(user)
     except Exception as e:
         await m.reply_photo("https://c4.wallpaperflare.com/wallpaper/976/117/318/anime-girls-404-not-found-glowing-eyes-girls-frontline-wallpaper-preview.jpg", caption=f"`404 Error Occurred Failed To Get Data Of The User`\n\n `{e}`")
         return
