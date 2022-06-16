@@ -120,9 +120,8 @@ buttons = [
                        InlineKeyboardButton(text="[► Inline ◄]", switch_inline_query_current_chat=""),
                      ],
                     [                  
-                       InlineKeyboardButton(
-                         
-                     ],     text="🚑 Support",
+                       InlineKeyboardButton(                         
+                             text="🚑 Support",
                              url="https://t.me/bestie_support",
                        InlineKeyboardButton(
                              text="📢 Updates",
