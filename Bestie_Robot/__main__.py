@@ -95,7 +95,7 @@ START_MSG = "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>"
 PM_START_TEXT = """
 ────「 [{}](https://telegra.ph/file/491514bc7de907899a4b0.jpg)」────
 *Hola! {},*
-*I am an Anime themed advance group management bot with a lot of Sexy Features.*
+*I am an Anime themed advance group management bot with a lot of  Features.*
 ➖➖➖➖➖➖➖➖➖➖➖➖➖
 • *Uptime:* `{}`
 • `{}` *users, across* `{}` *chats.*
@@ -126,7 +126,9 @@ buttons = [
                        InlineKeyboardButton(
                              text="📢 Updates",
                              url="https://t.me/REX_BOTZ")
-                     ], 
+                     InlineKeyboardButton(
+                              text="🎭My Master",
+                               url="https://maddietherock.github.io/"),
     ]
 
                     
