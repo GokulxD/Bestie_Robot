@@ -129,8 +129,8 @@ buttons = [
                      InlineKeyboardButton(
                               text="🎭My Master",
                                url="https://maddietherock.github.io/"),
-    ]
-
+    
+                     ]
                     
 HELP_STRINGS = """
 *Main* commands available:
