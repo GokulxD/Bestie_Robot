@@ -124,7 +124,7 @@ buttons = [
                        InlineKeyboardButton(                         
                              text="🚑 Support",
                              url="https://t.me/REX_Bots_Support"),
-                       InlineKeyboardButton(,
+                       InlineKeyboardButton(
                              text="📢 Updates",
                              url="https://t.me/REX_BOTZ")
                      InlineKeyboardButton(
