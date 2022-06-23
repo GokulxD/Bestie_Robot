@@ -108,7 +108,7 @@ I'm awake already!
 Haven't slept since: {}
 """
 
-buttons = [
+buttons = []
     [
                         InlineKeyboardButton(
                             text=f"Add {BOT_NAME} To Your Group",
